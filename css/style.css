@@ -1,0 +1,71 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	position: relative;
+}
+.contentTab{
+	font-size: 0;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background: rgb(251,219,79);
+	width: 100%;
+	height: 1.093333rem;
+	box-sizing: border-box;
+	transition: all 400ms ease-in-out;
+	position: absolute;
+}
+.active>span{
+	color:#ffffff !important;
+}
+.tabList{
+	padding: 0.133333rem 0;
+	width: 33.3%;
+	transition: all 400ms ease-in-out;
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+  	text-align: center;
+  	box-sizing: border-box;
+}
+.tabList>span{
+	display: inline-block;
+	width: 100%;
+	line-height: 0.826666rem;
+	font-size: 0.426666rem;
+  	color: rgba(255,255,255,.6);
+  	border-right: 1px solid rgb(255,255,255);
+}
+.contentList{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.minirefresh-wrap{
+	display: none;
+	margin-top: 1.093333rem;
+	box-sizing: border-box;
+	/*min-height: 100%;
+	position: absolute;*/
+	transition: all 400ms ease-in-out;
+	/*top:0;*/
+}
+.activeWrap{
+	/*position: relative;*/
+}
+.data-list{
+	font-size: 0.426666rem;
+}
+.minirefresh-scroll{
+	background: #fff;
+}
