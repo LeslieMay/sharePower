@@ -76,7 +76,125 @@ img{
 	background-color: #eeeeee;
 	min-height: 100%;
 }
-
+/*进行中*/
+.orderListNow{
+	width: 100%;
+	border-radius: 0.213333rem;
+  	background-color: #ffffff;
+  	font-size: 0;
+  	padding:0.453333rem 0.32rem 0.32rem 0.32rem;
+  	box-sizing: border-box;
+  	margin-bottom: 0.346666rem;
+}
+.orderListNowTitle{
+	font-size: 0.586666rem;
+	color: #060606;
+	margin-bottom: 0.4rem;
+}
+.orderListNowContent{
+	width: 100%;
+}
+.orderListNowContentPlace,.orderListNowContentTime,.orderListNowContentMoney{
+	width: 100%;
+	font-size: 0;
+}
+.orderListNowContentPlace{
+	margin-bottom: 0.4rem;
+}
+.orderListNowContentTime{
+	margin-bottom: 0.346666rem;
+}
+.orderListNowContentIcon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.4rem;
+	margin-right: 0.613333rem;
+}
+.orderListNowContentText{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.426666rem;
+	color: #606060;
+}
+.orderListNowContentMoney>.orderListNowContentText{
+	color: #80ce25;
+}
+/*已完成*/
+.orderListDone{
+	width: 100%;
+	border-radius: 0.213333rem;
+  	background-color: #ffffff;
+  	font-size: 0;
+  	padding:0.133333rem  0.4rem 0 0.4rem;
+  	box-sizing: border-box;
+  	margin-bottom: 0.346666rem;
+}
+.orderListDoneBorrow{
+	width: 100%;
+	padding:0.346666rem 0.293333rem 0.453333rem 0.293333rem;
+	box-sizing: border-box;
+	border-bottom:1px solid rgba(0, 0, 0, 0.3);
+}
+.orderListDoneReturn{
+	width: 100%;
+	padding:0.186666rem 0.293333rem 0.453333rem 0.293333rem;
+	box-sizing: border-box;
+}
+.orderListDoneBorrowId,
+.orderListDoneBorrowPlace,
+.orderListDoneBorrowTime,
+.orderListDoneReturnId,
+.orderListDoneReturnPlace,
+.orderListDoneReturnTime{
+	width: 100%;
+	font-size: 0;
+}
+.orderListDoneBorrowId,.orderListDoneReturnId{
+	margin-bottom: 0.16rem;
+}
+.orderListDoneBorrowPlace,.orderListDoneReturnPlace{
+	margin-bottom: 0.213333rem;
+}
+.orderListDoneBorrowId>span:nth-of-type(1),
+.orderListDoneBorrowPlace>span:nth-of-type(1),
+.orderListDoneBorrowTime>span:nth-of-type(1),
+.orderListDoneReturnId>span:nth-of-type(1),
+.orderListDoneReturnPlace>span:nth-of-type(1),
+.orderListDoneReturnTime>span:nth-of-type(1)
+{
+	width: 34.18%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.orderListDoneBorrowId>span:nth-of-type(1){
+	font-size: 0.586666rem;
+	color: #f5a623;
+}
+.orderListDoneReturnId>span:nth-of-type(1){
+	font-size: 0.586666rem;
+	color: #71c515;
+}
+.orderListDoneBorrowPlace>span:nth-of-type(1),
+.orderListDoneBorrowTime>span:nth-of-type(1),
+.orderListDoneReturnPlace>span:nth-of-type(1),
+.orderListDoneReturnTime>span:nth-of-type(1)
+{
+	font-size: 0.426666rem;
+	color: rgba(0, 0, 0, 0.6);
+}
+.orderListDoneBorrowId>span:nth-of-type(2),
+.orderListDoneBorrowPlace>span:nth-of-type(2),
+.orderListDoneBorrowTime>span:nth-of-type(2),
+.orderListDoneReturnId>span:nth-of-type(2),
+.orderListDoneReturnPlace>span:nth-of-type(2),
+.orderListDoneReturnTime>span:nth-of-type(2)
+{
+	font-size: 0.426666rem;
+	width: 65.82%;
+	color:  rgba(0, 0, 0, 0.39);
+	display: inline-block;
+	vertical-align: middle;
+}
 /*未支付*/
 .orderListNoPay{
 	width: 100%;
