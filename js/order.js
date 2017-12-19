@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var indexPage = (function() {
+	var orderPage = (function() {
 		var miniRefreshArr = [],
 			current = 0,
 			requestDelayTime = 600;
@@ -8,23 +8,17 @@ $(document).ready(function() {
 		}
 		var method = {
 			initSwitch: function() {
-				var length = $(".tabList").length;
-				$(".tabList").css("width", 100 / length + "%");
+				var length = $(".orderTabList").length;
+				$(".orderTabList").css("width", 100 / length + "%");
 				for(var i = 0; i < $(".minirefresh-wrap").length; i++) {
 					$(".minirefresh-wrap").eq(i).css("left", 100 * i + "%")
 				}
-				$(document).on("click touchstart", ".tabList", function() {
+				$(document).on("click touchstart", ".orderTabList", function() {
 					$(".active").removeClass("active");
 					$(".activeWrap").removeClass("activeWrap");
 					$(this).addClass("active");
 					var now = $(this).attr("data-index");
 					$(".minirefresh-wrap").eq(now).addClass("activeWrap");
-//					if(now != current){
-//						if (!miniRefreshArr[current]) {
-//	                        method.initMiniRefreshs(current);
-//	                    }
-//						current = now;
-//					}
 					for(var i = 0; i < $(".minirefresh-wrap").length; i++) {
 						$(".minirefresh-wrap").eq(i).css("left", 100 * (i - now) + "%");
 					}
@@ -32,7 +26,7 @@ $(document).ready(function() {
 			},
 			initMiniRefreshs: function(index) {
 				miniRefreshArr[index] = new MiniRefresh({
-					container: '#minirefresh' + index,
+					container: '#orderList' + index,
 					down: {
 						callback: function() {
 							setTimeout(function() {
@@ -63,5 +57,5 @@ $(document).ready(function() {
 		return o;
 	})()
 
-	indexPage.init();
+	orderPage.init();
 })

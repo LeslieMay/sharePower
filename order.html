@@ -11,7 +11,7 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
 		<meta http-equiv="cleartype" content="on">
-		<title></title>
+		<title>我的订单</title>
 		<script type="text/javascript" src="dist/js/flexible.js"></script>
 		<script type="text/javascript" src="dist/js/flexible_css.js"></script>
 		<link rel="stylesheet" href="dist/css/minirefresh.min.css" />
@@ -20,37 +20,51 @@
 	</head>
 
 	<body>
-		<div class="container">
-			<div class="contentTab">
-				<div data-index='0' class="tabList tabList1 active">
+		<div class="order">
+			<div class="orderTab">
+				<div data-index='0' class="orderTabList orderTabList1 active">
 					<span>进行中</span>
 				</div>
-				<div data-index='1' class="tabList tabList2">
+				<div data-index='1' class="orderTabList orderTabList2">
 					<span>已完成</span>
 				</div>
-				<div data-index='2' class="tabList tabList3">
+				<div data-index='2' class="orderTabList orderTabList3">
 					<span>未支付</span>
 				</div>
 			</div>
-			<div class="contentList">
-				<div id="minirefresh0" class="minirefresh-wrap activeWrap">
+			<div class="orderList">
+				<div id="orderList0" class="minirefresh-wrap activeWrap">
 					<div class="minirefresh-scroll">
 						<ul class="data-list" id="listdata0">
-							1111111
 						</ul>
 					</div>
 				</div>
-				<div id="minirefresh1" class="minirefresh-wrap">
+				<div id="orderList1" class="minirefresh-wrap">
 					<div class="minirefresh-scroll">
 						<ul class="data-list" id="listdata1">
-							2
+							<div class="orderListDone">
+								
+							</div>
 						</ul>
 					</div>
 				</div>
-				<div id="minirefresh2" class="minirefresh-wrap">
+				<div id="orderList2" class="minirefresh-wrap">
 					<div class="minirefresh-scroll">
 						<ul class="data-list" id="listdata2">
-							3
+							<div class="orderListNoPay">
+								<div class="orderListNoPayContent">
+									<div class="orderListNoPayContentTime">
+										2017/12/08/01:06:18
+									</div>
+									<div class="orderListNoPayContentMoney">
+										<span>待支付</span><span>1.00元</span>
+									</div>
+									<div class="orderListNoPayContentPower">
+										<span>充电宝</span><span>ID1111111111111</span>
+									</div>
+								</div>
+								<div class="orderListNoPayBtn">去支付</div>
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -60,6 +74,5 @@
 	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
 	<script type="text/javascript" src="dist/js/minirefresh.min.js"></script>
 	<script type="text/javascript" src="dist/js/common.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-
+	<script type="text/javascript" src="js/order.js"></script>
 </html>
