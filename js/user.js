@@ -2,12 +2,62 @@ $(document).ready(function(){
 	var userPage = (function(){
 		var domEvent = {
 			click:function(){
+				//我的订单
 				$(".userContentListOrder").on("click",function(){
 					window.location.href = "order.html"
 				})
+				//我要申报
 				$(".userContentListDeclare").on("click",function(){
 					window.location.href = "declare.html"
 				})
+				//更多 抽屉
+				$(".userFooterMoreImg").on("click",function(){
+					if(!$(".userFooterMoreImg").hasClass("userFooterMoreImgRoll")){
+//						$(".userFooter").addClass("userFooterActive")
+						$(".userContent").slideUp(400);
+						$(".userFooterMoreImg").addClass("userFooterMoreImgRoll");
+						$(".userFooterMoreText").hide(200);
+						setTimeout(function(){
+							$(".userFooterIcon").slideDown(600);
+						},400)
+						
+					}else{
+//						$(".userFooter").removeClass("userFooterActive")
+						$(".userFooterMoreImg").removeClass("userFooterMoreImgRoll");
+						$(".userFooterIcon").slideUp(600);
+						setTimeout(function(){
+							$(".userFooterMoreText").show(400);
+							$(".userContent").slideDown(600);
+						},600)
+						
+					}
+				})
+				//未支付订单
+				$(".noPayOrder").on("click",function(){
+					window.location.href = "order.html?page=noPayOrder";
+				})
+				//进行中订单
+				$(".nowOrder").on("click",function(){
+					window.location.href = "order.html?page=nowOrder";
+				})
+				//已完成订单
+				$(".doneOrder").on("click",function(){
+					window.location.href = "order.html?page=doneOrder";
+				})
+				//充值明细
+				$(".detailRecharge").on("click",function(){
+					window.location.href = "rechargeDetial.html";
+				})
+				//提现明细
+				$(".detailWithdraw").on("click",function(){
+//					window.location.href = "order.html?page=doneOrder";
+				})
+				//优惠券
+				$(".coupon").on("click",function(){
+					alert("暂未开放，敬请期待~")
+//					window.location.href = "order.html?page=doneOrder";
+				})
+				
 			}
 		}
 		var o = {

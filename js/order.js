@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	var orderPage = (function() {
+		var key = getQueryString("page");
 		var miniRefreshArr = [],
 			current = 0,
 			requestDelayTime = 600;
@@ -51,7 +52,14 @@ $(document).ready(function() {
 				for(var i = 0 ; i<$(".minirefresh-wrap").length;i++){
 					method.initMiniRefreshs(i);
 				}
-				$('.minirefresh-wrap').show()
+				$('.minirefresh-wrap').show();
+				if(key=="noPayOrder"){
+					$(".orderTabList1").click();
+				}else if(key=="nowOrder"){
+					$(".orderTabList2").click();
+				}else if(key=="doneOrder"){
+					$(".orderTabList3").click();
+				}
 			}
 		}
 		return o;

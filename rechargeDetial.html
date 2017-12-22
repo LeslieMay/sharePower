@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -12,45 +13,51 @@
 		<title>充值明细</title>
 		<script type="text/javascript" src="dist/js/flexible.js"></script>
 		<script type="text/javascript" src="dist/js/flexible_css.js"></script>
+		<link rel="stylesheet" href="dist/css/minirefresh.min.css" />
 		<link rel="stylesheet" href="dist/css/common.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
+
 	<body>
 		<div class="recharge">
-			<div class="rechargeTitle">
-				充值明细
-			</div>
-			<div class="rechargeContent">
-				<div class="rechargeContentList">
-					<div class="rechargeStatus">
-						<div class="rechargeStatusTime">
-							2017/12/08/01:06:18
+			<div class="rechargeContent minirefresh-wrap wrapShow" id="rechargeContent">
+				<div class="minirefresh-scroll">
+					<div class="rechargeTitle">
+						充值明细
+					</div>
+					<div class="rechargeContentListDiv">
+						<div class="rechargeContentList">
+							<div class="rechargeStatus">
+								<div class="rechargeStatusTime">
+									2017/12/08/01:06:18
+								</div>
+								<div class="rechargeStatusResult">
+									已完成
+								</div>
+							</div>
+							<div class="rechargePay">
+								<span>待支付</span><span>1.00元</span>
+							</div>
+							<div class="rechargePower">
+								<span>充电宝</span><span>ID1111111111111</span>
+							</div>
 						</div>
-						<div class="rechargeStatusResult">
-							已完成
+						<div class="rechargeContentList">
+							<div class="rechargeStatus">
+								<div class="rechargeStatusTime">
+									2017/12/08/01:06:18
+								</div>
+								<div class="rechargeStatusResult">
+									已完成
+								</div>
+							</div>
+							<div class="rechargePay">
+								<span>待支付</span><span>1.00元</span>
+							</div>
+							<div class="rechargePower">
+								<span>充电宝</span><span>ID1111111111111</span>
+							</div>
 						</div>
-					</div>
-					<div class="rechargePay">
-						<span>待支付</span><span>1.00元</span>
-					</div>
-					<div class="rechargePower">
-						<span>充电宝</span><span>ID1111111111111</span>
-					</div>
-				</div>
-				<div class="rechargeContentList">
-					<div class="rechargeStatus">
-						<div class="rechargeStatusTime">
-							2017/12/08/01:06:18
-						</div>
-						<div class="rechargeStatusResult">
-							已完成
-						</div>
-					</div>
-					<div class="rechargePay">
-						<span>待支付</span><span>1.00元</span>
-					</div>
-					<div class="rechargePower">
-						<span>充电宝</span><span>ID1111111111111</span>
 					</div>
 				</div>
 			</div>
@@ -60,6 +67,8 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/js/minirefresh.min.js"></script>
 	<script type="text/javascript" src="dist/js/common.js"></script>
 	<script type="text/javascript" src="js/rechargeDetial.js"></script>
+
 </html>
