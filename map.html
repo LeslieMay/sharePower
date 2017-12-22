@@ -2,8 +2,93 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<meta name="author" content="leslie" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="cleartype" content="on">
+		<title>附近店家</title>
+		<script type="text/javascript" src="dist/js/flexible.js"></script>
+		<script type="text/javascript" src="dist/js/flexible_css.js"></script>
+		<link rel="stylesheet" href="dist/css/common.css" />
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
+		<div class="map">
+			<div class="mapHeader">
+				<div class="mapHeaderLeft">
+					<div class="mapHeaderImg">
+						<img src="img/user-header.png" />
+					</div>
+					<div class="mapHeaderSearch">
+						<input type="text" placeholder="点击搜索位置信息" />
+					</div>
+				</div>
+				<div class="mapHeaderIcon">
+					<img src="img/map-icon1.png" />
+				</div>
+			</div>
+			<div class="mapContent"></div>
+			<div class="mapFooter">
+				<div class="mapFooterBrowser">
+					<img src="img/map-browser.png" />
+				</div>
+				<div class="mapFooterReturn">
+					<img src="img/map-return.png" />
+				</div>
+			</div>
+		</div>
+		<div class="mapList">
+			<div class="mapListHeader">
+				<div class="mapListHeaderLeft">
+					<div class="mapListHeaderImg">
+						<img src="img/user-header.png" />
+					</div>
+					<div class="mapListHeaderSearch">
+						<input type="text" placeholder="点击搜索位置信息" />
+					</div>
+				</div>
+				<div class="mapListHeaderIcon">
+					<img src="img/map-icon2.png" />
+				</div>
+			</div>
+			<div class="mapListContent">
+				<div class="mapListOne">
+					<div class="mapListOneContent">
+						<div class="mapListOneContentLeft">
+							<p>海韵西餐厅</p>
+							<p>龙胜路水都假日酒店1楼</p>
+						</div>
+						<div class="mapListOneContentRight">
+							09:00-24:00
+						</div>
+					</div>
+					<div class="mapListOneIcon">
+						<div class="mapListOneIconOne">
+							<div class="mapIcon"></div>
+							<div class="mapNum">2</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon"></div>
+							<div class="mapNum">4</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon"></div>
+							<div class="mapNum">0</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapText">可还</div>
+							<div class="mapNum">2</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
+	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/js/common.js"></script>
+	<script type="text/javascript" src="js/order.js"></script>
 </html>

@@ -14,6 +14,7 @@ img{
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	position: relative;
+	background-color: #eeeeee;
 }
 .orderTab{
 	font-size: 0;
@@ -620,7 +621,7 @@ img{
 	height: 100%;
 	overflow-y: hidden;
 	-webkit-overflow-scrolling: touch;
-	/*background: #eeeeee;*/
+	background: #eeeeee;
 	position: relative;
 	padding: 0.266666rem 0.48rem 1.066666rem 0.48rem;
 	box-sizing: border-box;
@@ -686,4 +687,79 @@ img{
 	line-height: 1.066666rem;
 	left: 0;
 	z-index: 3;
+}
+
+
+/*map*/
+.map{
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	position: relative;
+}
+.mapHeader{
+	width: 100%;
+	font-size: 0;
+	background-color: #fbdc43;
+	padding: 0.106666rem 0.64rem;
+	box-sizing: border-box;
+}
+.mapHeaderLeft{
+	width: 87.46%;
+	font-size: 0;
+	display: inline-block;
+	vertical-align: middle;
+	padding-bottom: 0.053333rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.mapHeaderImg{
+	width: 13.28%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.mapHeaderSearch{
+	width: 86.72%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.mapHeaderSearch>input{
+	width: 100%;
+	padding-left: 0.106666rem;
+	box-sizing: border-box;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	font-size: 0.56rem;
+	color: white;
+}
+.mapHeaderSearch>input::-moz-placeholder,
+.mapHeaderSearch>input::-ms-input-placeholder,
+.mapHeaderSearch>input::-webkit-input-placeholder{
+	color: rgba(0, 0, 0, 0.22);
+}
+
+.mapHeaderIcon{
+	width: 5.5%;
+	margin-left: 7.04%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.mapFooter{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 1.04rem;
+	font-size: 0;
+}
+.mapFooterBrowser,.mapFooterReturn{
+	width:28% ;
+	display: inline-block;
+	vertical-align: middle;
+}
+.mapFooterBrowser{
+	margin:0 20.5% 0 11.7% ;
+}
+.mapFooterReturn{
+	margin-right: 11.7%;
 }
