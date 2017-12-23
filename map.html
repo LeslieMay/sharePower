@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
 		<meta charset="UTF-8">
 		<meta name="author" content="leslie" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -14,7 +15,9 @@
 		<script type="text/javascript" src="dist/js/flexible.js"></script>
 		<script type="text/javascript" src="dist/js/flexible_css.js"></script>
 		<link rel="stylesheet" href="dist/css/common.css" />
+		<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=aLeNEt9jawh7DiWAmRAGzZinZFlgjPk6"></script>
 	</head>
 	<body>
 		<div class="map">
@@ -31,7 +34,7 @@
 					<img src="img/map-icon1.png" />
 				</div>
 			</div>
-			<div class="mapContent"></div>
+			<div id="mapContent" class="mapContent"></div>
 			<div class="mapFooter">
 				<div class="mapFooterBrowser">
 					<img src="img/map-browser.png" />
@@ -68,16 +71,197 @@
 					</div>
 					<div class="mapListOneIcon">
 						<div class="mapListOneIconOne">
-							<div class="mapIcon"></div>
+							<div class="mapIcon mapIcon1">
+								<img src="img/map-android.png" />
+							</div>
 							<div class="mapNum">2</div>
 						</div>
 						<div class="mapListOneIconOne">
-							<div class="mapIcon"></div>
+							<div class="mapIcon mapIcon2">
+								<img src="img/map-apple.png" />
+							</div>
 							<div class="mapNum">4</div>
 						</div>
 						<div class="mapListOneIconOne">
-							<div class="mapIcon"></div>
-							<div class="mapNum">0</div>
+							<div class="mapIcon mapIcon3">
+								<img src="img/map-iwatch.png"/>
+							</div>
+							<div class="mapNum noMapNum">0</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapText">可还</div>
+							<div class="mapNum">2</div>
+						</div>
+					</div>
+				</div>
+				<div class="mapListOne">
+					<div class="mapListOneContent">
+						<div class="mapListOneContentLeft">
+							<p>海韵西餐厅</p>
+							<p>龙胜路水都假日酒店1楼</p>
+						</div>
+						<div class="mapListOneContentRight">
+							09:00-24:00
+						</div>
+					</div>
+					<div class="mapListOneIcon">
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon1">
+								<img src="img/map-android.png" />
+							</div>
+							<div class="mapNum">2</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon2">
+								<img src="img/map-apple.png" />
+							</div>
+							<div class="mapNum">4</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon3">
+								<img src="img/map-iwatch.png"/>
+							</div>
+							<div class="mapNum noMapNum">0</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapText">可还</div>
+							<div class="mapNum">2</div>
+						</div>
+					</div>
+				</div>
+				<div class="mapListOne">
+					<div class="mapListOneContent">
+						<div class="mapListOneContentLeft">
+							<p>海韵西餐厅</p>
+							<p>龙胜路水都假日酒店1楼</p>
+						</div>
+						<div class="mapListOneContentRight">
+							09:00-24:00
+						</div>
+					</div>
+					<div class="mapListOneIcon">
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon1">
+								<img src="img/map-android.png" />
+							</div>
+							<div class="mapNum">2</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon2">
+								<img src="img/map-apple.png" />
+							</div>
+							<div class="mapNum">4</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon3">
+								<img src="img/map-iwatch.png"/>
+							</div>
+							<div class="mapNum noMapNum">0</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapText">可还</div>
+							<div class="mapNum">2</div>
+						</div>
+					</div>
+				</div>
+				<div class="mapListOne">
+					<div class="mapListOneContent">
+						<div class="mapListOneContentLeft">
+							<p>海韵西餐厅</p>
+							<p>龙胜路水都假日酒店1楼</p>
+						</div>
+						<div class="mapListOneContentRight">
+							09:00-24:00
+						</div>
+					</div>
+					<div class="mapListOneIcon">
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon1">
+								<img src="img/map-android.png" />
+							</div>
+							<div class="mapNum">2</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon2">
+								<img src="img/map-apple.png" />
+							</div>
+							<div class="mapNum">4</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon3">
+								<img src="img/map-iwatch.png"/>
+							</div>
+							<div class="mapNum noMapNum">0</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapText">可还</div>
+							<div class="mapNum">2</div>
+						</div>
+					</div>
+				</div>
+				<div class="mapListOne">
+					<div class="mapListOneContent">
+						<div class="mapListOneContentLeft">
+							<p>海韵西餐厅</p>
+							<p>龙胜路水都假日酒店1楼</p>
+						</div>
+						<div class="mapListOneContentRight">
+							09:00-24:00
+						</div>
+					</div>
+					<div class="mapListOneIcon">
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon1">
+								<img src="img/map-android.png" />
+							</div>
+							<div class="mapNum">2</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon2">
+								<img src="img/map-apple.png" />
+							</div>
+							<div class="mapNum">4</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon3">
+								<img src="img/map-iwatch.png"/>
+							</div>
+							<div class="mapNum noMapNum">0</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapText">可还</div>
+							<div class="mapNum">2</div>
+						</div>
+					</div>
+				</div>
+				<div class="mapListOne">
+					<div class="mapListOneContent">
+						<div class="mapListOneContentLeft">
+							<p>海韵西餐厅</p>
+							<p>龙胜路水都假日酒店1楼</p>
+						</div>
+						<div class="mapListOneContentRight">
+							09:00-24:00
+						</div>
+					</div>
+					<div class="mapListOneIcon">
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon1">
+								<img src="img/map-android.png" />
+							</div>
+							<div class="mapNum">2</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon2">
+								<img src="img/map-apple.png" />
+							</div>
+							<div class="mapNum">4</div>
+						</div>
+						<div class="mapListOneIconOne">
+							<div class="mapIcon mapIcon3">
+								<img src="img/map-iwatch.png"/>
+							</div>
+							<div class="mapNum noMapNum">0</div>
 						</div>
 						<div class="mapListOneIconOne">
 							<div class="mapText">可还</div>
@@ -90,5 +274,5 @@
 	</body>
 	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
 	<script type="text/javascript" src="dist/js/common.js"></script>
-	<script type="text/javascript" src="js/order.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
 </html>

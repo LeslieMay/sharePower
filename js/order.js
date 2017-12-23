@@ -54,11 +54,11 @@ $(document).ready(function() {
 				}
 				$('.minirefresh-wrap').show();
 				if(key=="noPayOrder"){
-					$(".orderTabList1").click();
-				}else if(key=="nowOrder"){
-					$(".orderTabList2").click();
-				}else if(key=="doneOrder"){
 					$(".orderTabList3").click();
+				}else if(key=="nowOrder"){
+					$(".orderTabList1").click();
+				}else if(key=="doneOrder"){
+					$(".orderTabList2").click();
 				}
 			}
 		}

@@ -10,6 +10,10 @@ $(document).ready(function(){
 				$(".userContentListDeclare").on("click",function(){
 					window.location.href = "declare.html"
 				})
+				//常见问题
+				$(".userContentListIssue").on("click",function(){
+					window.location.href = "issue.html"
+				})
 				//更多 抽屉
 				$(".userFooterMoreImg").on("click",function(){
 					if(!$(".userFooterMoreImg").hasClass("userFooterMoreImgRoll")){
@@ -46,11 +50,11 @@ $(document).ready(function(){
 				})
 				//充值明细
 				$(".detailRecharge").on("click",function(){
-					window.location.href = "rechargeDetial.html";
+					window.location.href = "rechargeDetail.html";
 				})
 				//提现明细
 				$(".detailWithdraw").on("click",function(){
-//					window.location.href = "order.html?page=doneOrder";
+					window.location.href = "withdrawDetail.html";
 				})
 				//优惠券
 				$(".coupon").on("click",function(){

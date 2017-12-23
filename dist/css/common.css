@@ -1,6 +1,6 @@
 /*页面初始化*/
 
-body{color:#222;background: #fff;font-size:14px;font-family:arial,Microsoft YaHei,Helvetica,sans-serif;tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+body{color:#222;background: #fff;font-size:14px;font-family:"微软雅黑",Microsoft YaHei,Helvetica,sans-serif;tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
 body,button,dd,dl,dt,figure,h1,h2,h3,h4,h5,html,input,li,p,select,span,strong,textarea,u,ul{margin:0;padding:0}
 input{ outline:none; -webkit-tap-highlight-color:rgba(255,255,255,0); -webkit-appearance:none; font-family:"微软雅黑"}
 input::-webkit-input-placeholder,input::-moz-placeholder{ color: rgba(0, 0, 0, 0.22);}
