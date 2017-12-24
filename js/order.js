@@ -29,6 +29,7 @@ $(document).ready(function() {
 				miniRefreshArr[index] = new MiniRefresh({
 					container: '#orderList' + index,
 					down: {
+						isAuto:true,
 						callback: function() {
 							setTimeout(function() {
 								// 每次下拉刷新后，上拉的状态会被自动重置
@@ -53,13 +54,15 @@ $(document).ready(function() {
 					method.initMiniRefreshs(i);
 				}
 				$('.minirefresh-wrap').show();
-				if(key=="noPayOrder"){
-					$(".orderTabList3").click();
-				}else if(key=="nowOrder"){
-					$(".orderTabList1").click();
-				}else if(key=="doneOrder"){
-					$(".orderTabList2").click();
-				}
+				setTimeout(function(){
+					if(key=="noPayOrder"){
+						$(".orderTabList3").click();
+					}else if(key=="nowOrder"){
+						$(".orderTabList1").click();
+					}else if(key=="doneOrder"){
+						$(".orderTabList2").click();
+					}
+				},0)
 			}
 		}
 		return o;

@@ -61,7 +61,11 @@ $(document).ready(function(){
 					alert("暂未开放，敬请期待~")
 //					window.location.href = "order.html?page=doneOrder";
 				})
-				
+				//优惠券
+				$(".activity").on("click",function(){
+					alert("暂未开放，敬请期待~")
+//					window.location.href = "order.html?page=doneOrder";
+				})
 			}
 		}
 		var o = {

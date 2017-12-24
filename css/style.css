@@ -448,7 +448,8 @@ img{
 .userFooterIcon{
 	display: none;
 	width: 100%;
-	margin-top: 18.4%;
+	/*margin-top: 18.4%;*/
+	margin-top: 6.4%;
 	font-size: 0;
 }
 .userFooterIconList{
@@ -500,6 +501,9 @@ img{
 }
 .userFooterIconList:nth-of-type(6) img{
 	width: 39.1%;
+}
+.userFooterIconList:nth-of-type(7) img{
+	width: 44.35%;
 }
 .userFooterIconListText{
 	margin-top: 0.16rem;
