@@ -14,9 +14,14 @@ $(document).ready(function(){
 				$(".userContentListIssue").on("click",function(){
 					window.location.href = "issue.html"
 				})
+				//常见问题
+				$(".userContentListAbout").on("click",function(){
+					window.location.href = "about.html"
+				})
 				//更多 抽屉
 				$(".userFooterMoreImg").on("click",function(){
 					if(!$(".userFooterMoreImg").hasClass("userFooterMoreImgRoll")){
+						$(".userFooterMoreImg").removeClass("animated infinite bounce")
 //						$(".userFooter").addClass("userFooterActive")
 						$(".userContent").slideUp(400);
 						$(".userFooterMoreImg").addClass("userFooterMoreImgRoll");
@@ -32,6 +37,9 @@ $(document).ready(function(){
 						setTimeout(function(){
 							$(".userFooterMoreText").show(400);
 							$(".userContent").slideDown(600);
+							setTimeout(function(){
+								$(".userFooterMoreImg").addClass("animated infinite bounce")
+							},700)
 						},600)
 						
 					}
@@ -70,7 +78,7 @@ $(document).ready(function(){
 		}
 		var o = {
 			init:function(){
-				domEvent.click()
+				domEvent.click();
 			}
 		}
 		return o;
