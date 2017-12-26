@@ -86,6 +86,7 @@ img{
 .minirefresh-scroll{
 	min-height: 100%;
 	background-color: #eeeeee;
+	/*position: relative;*/
 }
 .data-list{
 	width: 100%;
@@ -95,6 +96,29 @@ img{
 	min-height: 100%;
 }
 /*进行中*/
+.noOrder{
+	display: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.noOrderImg{
+	width: 21.33%;
+    margin: 0 auto 0.682666rem auto;
+}
+.noOrderText{
+	text-align: center;
+    font-size: 0.426666rem;
+    letter-spacing: -0.4px;
+    color: #333333;
+}
 .orderListNow{
 	width: 100%;
 	border-radius: 0.213333rem;
@@ -901,6 +925,14 @@ img{
 	box-sizing: border-box;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
+}
+.infoModal{
+	position: absolute;
+	bottom: 0.533333rem;
+	width: 90%;
+	left: 5%;
+	z-index: 12;
+	display: none;
 }
 .mapListOne{
 	width: 100%;

@@ -33,7 +33,22 @@ $(document).ready(function() {
 						callback: function() {
 							setTimeout(function() {
 								// 每次下拉刷新后，上拉的状态会被自动重置
-								$(".data-list").eq(index).prepend("<p>前：" + (new Date()) + "</p>")
+//								$(".data-list").eq(index).prepend("<p>前：" + (new Date()) + "</p>")
+								if($(".orderListNow").length==0){
+									$(".noOrderListNow").show();
+								}else{
+									$(".noOrderListNow").hide();
+								}
+								if($(".orderListDone").length==0){
+									$(".noOrderListDone").show();
+								}else{
+									$(".noOrderListDone").hide();
+								}
+								if($(".orderListNoPay").length==0){
+									$(".noOrderListNoPay").show();
+								}else{
+									$(".noOrderListNoPay").hide();
+								}
 								miniRefreshArr[index].endDownLoading(true);
 							}, requestDelayTime);
 						}
