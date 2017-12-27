@@ -296,8 +296,8 @@ img{
 	width: 23%;
 	display: inline-block;
 	vertical-align: middle;
-	/*background-color: #ff576b;*/
-	background-color: #334681;
+	background-color: #ff576b;
+	/*background-color: #334681;*/
 	color: #FFFFFF;
 	font-size: 0.48rem;
 	text-align: center;
@@ -681,13 +681,13 @@ img{
 	font-size: 0.426666rem;
 	line-height:1.093333rem ;
 	border-radius: 0.16rem;
-	/*background-color: #ff576b;*/
-	background-color: #334681;
+	background-color: #ff576b;
+	/*background-color: #334681;*/
 }
 
 
-/*recharge page*/
-.recharge{
+/*rechargeDetail page*/
+.rechargeDetail{
 	width: 100%;
 	height: 100%;
 	overflow-y: hidden;
@@ -697,11 +697,11 @@ img{
 	padding: 0.266666rem 0.48rem 1.066666rem 0.48rem;
 	box-sizing: border-box;
 }
-.recharge .minirefresh-scroll{
+.rechargeDetail .minirefresh-scroll{
 	padding: 0.266666rem 0.48rem 1.066666rem 0.48rem;
 	box-sizing: border-box;
 }
-.rechargeTitle{
+.rechargeDetailTitle{
 	font-size: 0.586666rem;
 	color: #060606;
 	margin-bottom: 0.293333rem;
@@ -1049,6 +1049,11 @@ img{
 	bottom: 0.666666rem;
 	width:85.6% ;
 	left: 7.2%;
+	border-radius: 0.16rem;
+  	background-color: #ff576b;
+  	line-height: 1.093333rem;
+  	font-size: 0.426666rem;
+  	color: #FFFFFF;
 }
 
 
@@ -1432,4 +1437,173 @@ img{
 }
 .aboutContainer>p:nth-of-type(1){
 	margin-bottom: 0.973333rem;
+}
+
+
+/*recharge page*/
+.recharge{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
+	position: relative;
+	padding-top: 0.1px;
+}
+.rechargeTitle{
+	padding:6.8% 7.33% 10.67%  7.33%;
+	box-sizing: border-box;
+	font-size: 0.933333rem;
+	color: #000000;
+}
+.rechargeChoose{
+	width:85.34% ;
+	margin:0 auto;
+	font-size: 0;
+}
+.rechargeChooseBtn{
+	width: 46.25%;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.12rem 0.093333rem;
+	box-sizing: border-box;
+	border-radius: 0.16rem;
+  	border: solid 1px #c8dbff;
+  	margin-bottom: 0.466666rem;
+  	overflow: hidden;
+}
+.rechargeChooseBtnActive{
+	background: url(../img/recharge-bg.png));
+	background-size: 100% 100%;
+	border-color: transparent;
+}
+.rechargeChooseBtn:nth-of-type(2n){
+	margin-left: 7.5%;
+}
+.rechargeChooseBtn:last-child{
+	margin-bottom: 0;
+}
+.rechargeChooseBtnContent{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	border-radius: 0.066666rem;
+  	background-color: #edf3ff;
+  	border: solid 1px #edf3ff;
+	height: 1.76rem;
+}
+.rechargeChooseBtnActive .rechargeChooseBtnContent{
+	background-color: transparent;
+	border-color: transparent;
+}
+.rechargeChooseBtnText{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+}
+.rechargeChooseBtnText>span{
+	font-size: 0.4rem;
+	color: #90949c;
+	display: block;
+}
+.rechargeChooseBtnActive .rechargeChooseBtnText>span{
+	color: #FFFFFF;
+}
+.rechargeChooseBtnText>img{
+	margin:0.2rem auto 0 auto;
+	width: 0.533333rem;
+	height: auto;
+	display: none;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+}
+.rechargeChooseBtnActive .rechargeChooseBtnText>img{
+	display: block;
+}
+.rechargeBtn{
+	text-align: center;
+	margin-top: 37.6%;
+	width: 83.3%;
+	margin: 37.6% auto 0 auto;
+	border-radius: 0.16rem;
+  	background-color: #ff576b;
+	color: #ffffff;
+	font-size: 0.426666rem;
+	line-height: 1.066666rem;
+}
+
+
+/*deposit page*/
+.deposit{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
+	position: relative;
+	padding-top: 0.1px;
+}
+.depositContent{
+	width: 78%;
+	margin: 44.13% auto 0 auto;
+	position: relative
+}
+.depositContentText{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	left: 0;
+	margin-left: 23.02%;
+	font-size: 0.573333rem;
+	color: #FFFFFF;
+}
+.depositContentMoney{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	left: 0;
+	margin-left: 73.23%;
+	font-size: 0.573333rem;
+	color: #FFFFFF;
+}
+.depositContentBtn{
+	width: 100%;
+	margin-top: 52.53%;
+	padding:0 9.33%;
+	box-sizing: border-box;
+	font-size: 0;
+}
+.depositContentBtnYes,.depositContentBtnNo{
+	display: inline-block;
+	vertical-align: middle;
+	width:42.62% ;
+	color: #FFFFFF;
+	line-height: 1.066666rem;
+	text-align: center;
+	 font-size: 0.426666rem;
+	 border-radius: 0.16rem;
+}
+.depositContentBtnYes{
+	background-color: #d8d8d8;
+}
+.depositContentBtnNo{
+	background-color: #ff576b;
+	margin-left: 14.76%;
 }
