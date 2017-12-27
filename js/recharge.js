@@ -6,6 +6,9 @@ $(document).ready(function(){
 					$(".rechargeChooseBtnActive").removeClass("rechargeChooseBtnActive");
 					$(this).addClass("rechargeChooseBtnActive")
 				})
+				$(".toDetial").on("click",function(){
+					window.location.href = "rechargeDetail.html"
+				})
 			}
 		}
 		var o = {

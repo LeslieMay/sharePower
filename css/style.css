@@ -342,6 +342,10 @@ img{
 	height: auto;
 	display: inline-block;
 	vertical-align: middle;
+	border-radius: 50%;
+}
+.userInfoImg>img{
+	border-radius: 50%;
 }
 .userInfoText{
 	display: inline-block;
@@ -1453,8 +1457,23 @@ img{
 .rechargeTitle{
 	padding:6.8% 7.33% 10.67%  7.33%;
 	box-sizing: border-box;
+	font-size: 0;
+}
+.rechargeTitle>span:nth-of-type(1){
+	width: 50%;
+	display: inline-block;
+	vertical-align: middle;
 	font-size: 0.933333rem;
 	color: #000000;
+	text-align: left;
+}
+.rechargeTitle>span:nth-of-type(2){
+	width: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.32rem;
+	color: #90949c;
+	text-align: right;
 }
 .rechargeChoose{
 	width:85.34% ;
@@ -1533,7 +1552,7 @@ img{
 	text-align: center;
 	margin-top: 37.6%;
 	width: 83.3%;
-	margin: 37.6% auto 0 auto;
+	margin: 27.6% auto 0 auto;
 	border-radius: 0.16rem;
   	background-color: #ff576b;
 	color: #ffffff;
@@ -1551,11 +1570,19 @@ img{
 	box-sizing: border-box;
 	position: relative;
 	padding-top: 0.1px;
-	background-color: #e8effb;
+	/*background-color: #e8effb;*/
+}
+.depositDetail{
+	padding-top: 13.47%;
+	width: 78%;
+	margin: 0 auto;
+	text-align: right;
+	font-size: 0.32rem;
+	color: #90949c;
 }
 .depositContent{
 	width: 78%;
-	margin: 44.13% auto 0 auto;
+	margin: 27.47% auto 0 auto;
 	position: relative
 }
 .depositContentText{
