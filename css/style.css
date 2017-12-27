@@ -383,7 +383,7 @@ img{
 	color: #FFFFFF;
 	box-sizing: border-box;
 }
-.userOptionDeposit{
+.userOptionRecharge{
 	border-right: 1px solid #FFFFFF;
 }
 .userContent{
@@ -1473,7 +1473,7 @@ img{
   	overflow: hidden;
 }
 .rechargeChooseBtnActive{
-	background: url(../img/recharge-bg.png));
+	background: url(../img/recharge-bg.png);
 	background-size: 100% 100%;
 	border-color: transparent;
 }
@@ -1551,6 +1551,7 @@ img{
 	box-sizing: border-box;
 	position: relative;
 	padding-top: 0.1px;
+	background-color: #e8effb;
 }
 .depositContent{
 	width: 78%;

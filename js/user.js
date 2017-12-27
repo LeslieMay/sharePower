@@ -2,6 +2,14 @@ $(document).ready(function(){
 	var userPage = (function(){
 		var domEvent = {
 			click:function(){
+				//充值押金
+				$(".userOptionDeposit").on("click",function(){
+					window.location.href = "deposit.html"
+				})
+				//提现押金
+				$(".userOptionRecharge").on("click",function(){
+					window.location.href = "recharge.html"
+				})
 				//我的订单
 				$(".userContentListOrder").on("click",function(){
 					window.location.href = "order.html"
