@@ -12,9 +12,17 @@ window.loading = {
 	hide: function() {
 		$(".mask_load").hide();
 		$('#spinners').css("display", "none")
+	},
+	init:function(){
+		var mask = $("<div class='mask' style='display: none;'></div>");
+		var mask_load = $("<div class='mask_load' style='display: none;'></div>");
+		var ul = $("<ul id='spinners'><li data-id='2'><div id='preloader_2'><span></span><span></span><span></span><span></span></div></li></ul>")
+		$("body").append(mask);
+		$("body").append(mask_load);
+		$("body").append(ul);
 	}
 }
-
+window.loading.init();
 window.alert = function(msg) {
 	if(document.querySelectorAll('.alertBox').length) {
 		clearTimeout(window.alert.time);

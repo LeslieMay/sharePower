@@ -600,13 +600,50 @@ img{
 	color: rgba(0, 0, 0, 0.6);
 	border-bottom: solid 1px rgba(0, 0, 0, 0.08);
 }
-.declareFormUpload{
-	width: 1.333333rem;
-	height: 1.333333rem;
+.declareUpload{
 	margin-top: 0.24rem;
+	font-size: 0;
+}
+.declareUploadAlready{
+	box-sizing: border-box;
+	border-radius: 0.16rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.533333rem;
+	position: relative;
+	border: solid 1px rgba(0, 0, 0, 0.5);
+}
+.declareUploadAlready>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 0.16rem;
+}
+.close{
+	cursor: pointer;
+	background: #FFFFFF;
+	width: 0.5rem;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translateX(50%) translateY(-50%);
+	-webkit-transform: translateX(50%) translateY(-50%);
+	-moz-transform: translateX(50%) translateY(-50%);
+	-ms-transform: translateX(50%) translateY(-50%);
+	-o-transform: translateX(50%) translateY(-50%);
+}
+.declareFormUpload{
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.6rem;
+	height: 1.6rem;
 	border-radius: 0.16rem;
   	border: solid 1px rgba(0, 0, 0, 0.5);
   	position: relative;
+  	margin-right: 0.533333rem;
 }
 .declareFormUpload>input{
 	opacity: 0;
@@ -620,11 +657,11 @@ img{
 	z-index: 1;
 	top: 50%;
 	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-56%);
+	-webkit-transform: translateX(-50%) translateY(-56%);
+	-moz-transform: translateX(-50%) translateY(-56%);
+	-ms-transform: translateX(-50%) translateY(-56%);
+	-o-transform: translateX(-50%) translateY(-56%);
 	font-size: 0.8rem;
 	color: rgba(0, 0, 0, 0.2);
 }
