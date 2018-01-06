@@ -1107,6 +1107,7 @@ img{
 	/*background-image: url(../img/map-bg.png);
 	background-size: cover;*/
 	background: #131c23;
+	/*background: #000000;*/
 	position: relative;
 	/*opacity: 0.6;*/
 }
