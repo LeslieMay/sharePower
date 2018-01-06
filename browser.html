@@ -20,17 +20,21 @@
 
 	<body>
 		<div class="browser">
-			<div id="preloader_4">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+			<div class="browserContent">
+				<div class="browserProgress">
+					<div class="progress">
+						<b class="progress__bar">
+						    <!--<span class="progress__text">
+						      	已完成:<em>0%</em>
+						    </span>-->
+						  </b>
+					</div>
+				</div>
+				<div class="browserText"><span><img src="img/loading.png"/></span><span>已完成：<span class="progress__text">0%</span></span></div>
 			</div>
-
-			<div class="browserText"><span><img src="img/loading.png"/></span><span>努力加载中~</span></div>
 		</div>
-
 	</body>
-
+	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/js/common.js"></script>
+	<script type="text/javascript" src="js/browser.js"></script>
 </html>
