@@ -3,8 +3,7 @@ $(document).ready(function() {
 		var geolocation = null,
 			map = null,
 			markerArr = [],
-			info = [],
-			markerP = [],
+			aroundPower = [],
 			infoWin = null;
 		var options = {
 			timeout: 10000
@@ -61,81 +60,30 @@ $(document).ready(function() {
 				})
 			},
 			initMap: function() {
-				//				var map = new BMap.Map("mapContent");
-				//				map.centerAndZoom("上海", 12);
-				//				map.setCurrentCity("上海");
-				//				map.enableScrollWheelZoom(true);
-				//				var geolocation = new BMap.Geolocation();
-				//				geolocation.getCurrentPosition(function(r){
-				//					if(this.getStatus() == BMAP_STATUS_SUCCESS){
-				//						var mk = new BMap.Marker(r.point);
-				//						map.addOverlay(mk);
-				//						map.panTo(r.point);
-				////						alert('您的位置：'+r.point.lng+','+r.point.lat);
-				//					}
-				//					else {
-				//						alert('failed'+this.getStatus());
-				//					}        
-				//				},{enableHighAccuracy: true})
-				//				var center = new qq.maps.LatLng(39.982163, 116.306070);
 				map = new qq.maps.Map(document.getElementById("mapContent"), {
 					zoom: 13,
 					zoomControl: false,
 				});
 				geolocation = new qq.maps.Geolocation();
-				method.showWatchPosition();
-				method.getCurLocation();
+//				method.showWatchPosition();
 				infoWin = new qq.maps.InfoWindow({
 					map: map
 				});
-				//				geolocation.getIpLocation(method.showPosition, method.showErr)
 			},
 			getCurLocation: function() {
 				geolocation.getLocation(method.showPosition, method.showErr, options);
-			},
-			deleteOverlays: function() {
-				if(markerArr) {
-					for(var i in markerArr) {
-						markerArr[i].setMap(null);
-					}
-					markerArr.length = 0;
-				}
 			},
 			showPosition: function(position) {            
 				positionNum++;   
 				console.log(position); 
 				map.panTo(new qq.maps.LatLng(position.lat, position.lng));
 				var icon1 = new qq.maps.MarkerImage('img/locate.svg');
-				var icon2 = new qq.maps.MarkerImage('img/other.svg');
 				var marker = new qq.maps.Marker({
 					icon: icon1,
 					map: map,
 					position: new qq.maps.LatLng(position.lat, position.lng),
 				});
-				method.deleteOverlays()
-				markerP = [];
-				for(var i = 0; i < 5; i++) {
-					var p = new qq.maps.LatLng(position.lat + Math.random() / 20 - 0.025, position.lng + Math.random() / 20 - 0.025);
-					var tmp = new qq.maps.Marker({
-						icon: icon2,
-						map: map,
-						position: p,
-					});
-					markerP.push(p)
-					markerArr.push(tmp)
-				}
-				method.infoOpen()
-			},
-			infoOpen: function() {
-				for(var i = 0; i < markerP.length; i++) {
-					(function(n) {
-						var marker = markerArr[n];
-						qq.maps.event.addListener(marker, 'click', function() {
-							$(".test").text("海韵西餐厅" + n)
-							$(".infoModal").show()
-						});
-					})(i);
-				}
+				gainAjax.getLocate(position.lng,position.lat);
 			},
 			showErr: function() {
 				positionNum++;
@@ -148,18 +96,77 @@ $(document).ready(function() {
 			showClearWatch: function() {
 				geolocation.clearWatch();
 				console.log("停止监听")
+			},
+			infoOpen: function() {
+				//点击附近商家图标 出来的商家信息弹窗
+				for(var i = 0; i < aroundPower.length; i++) {
+					(function(n) {
+						var marker = markerArr[n];
+						qq.maps.event.addListener(marker, 'click', function() {
+							$(".mapListName").text(aroundPower[i].postion);//商家的名字
+							$(".mapListLocate").text(aroundPower[i].detailedLocation);//商家的详细地址
+							$(".infoModal").show()
+						});
+					})(i);
+				}
+			},
+			deleteOverlays: function() {
+				if(markerArr) {
+					for(var i in markerArr) {
+						markerArr[i].setMap(null);
+					}
+					markerArr.length = 0;
+				}
+			},
+			initMarker:function(obj){
+				//初始化地图marker
+				var icon2 = new qq.maps.MarkerImage('img/other.svg');
+				method.deleteOverlays()
+				markerP = [];
+				for(var i = 0; i < obj.length; i++) {
+					var p = new qq.maps.LatLng(obj[i].latitude,obj[i].longitude);
+					var newMaker = new qq.maps.Marker({
+						icon: icon2,
+						map: map,
+						position: p,
+					});
+					aroundPower.push(obj[i])
+					markerArr.push(newMaker)
+				}
+				method.infoOpen()
+			}
+		}
+		var gainAjax = {
+			getLocate:function(lon,lat){
+				//获取定位后拉取周围商家信息
+				loading.show();
+				$.ajax({
+					type:"get",
+					url:"http://wudl.nat200.top/map/boxs?lon="+lon+"&lat="+lat,
+					async:true,
+					success:function(resp){
+						if(resp.code!=1){
+							return alert(resp.msg)
+						}
+						method.initMarker(resp.data)
+					},
+					error:function(){
+						loading.hide();
+						alert("请求网络失败,请重试~")
+					}
+				});
 			}
 		}
 		var o = {
 			init: function() {
 				domEvent.switchMap()
 				method.initMap();
-				//				method.testAnim($(".map"),"zoomIn",true)
 				$(".map").show()
 				$(".map").animate({
 					"opacity": "1"
 				}, 300, "swing")
-				domEvent.clickMap()
+				domEvent.clickMap();
+				method.getCurLocation();
 			}
 		}
 		return o;
