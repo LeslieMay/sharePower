@@ -1668,3 +1668,38 @@ img{
 	background-color: #ff576b;
 	margin-left: 14.76%;
 }
+
+/*share page*/
+.share{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
+	position: relative;
+	padding-top: 0.1px;
+}
+
+.shareContainer{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+.shareContainer>p{
+	text-align: center;
+	font-size: 0.373333rem;
+	color: #333333;
+	line-height: 1.2;
+	margin-bottom: 0.4rem;
+}
+.shareImg{
+	width: 60%;
+	margin-left:auto ;
+	margin-right: auto;
+}
